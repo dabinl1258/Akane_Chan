@@ -69,16 +69,35 @@ fn SameFactor(st_num : &Vec<u64> , ed_num : &Vec<u64>) -> bool {
     }
     true
 }
+fn CntZero(input : &Vec<u64>) -> u64
+{
+    //input.iter().fold(0 as u64 , |s, x| if *x == 0{ 1 } else {0 } )
+   input.iter().map(|x| match *x { 0 => 1 , _ =>  0 } ).sum()
+   
+}
 fn main() {
     let input : Vec<u64> = ReadV();
     let mut st_num : Vec<u64> = vec![0,0,0,0];
     let mut ed_num : Vec<u64> = vec![0,0,0,0];
     let mut split_index = 0 as usize;
     
+    let is_containZeroSt = false;
+    let is_containZeroEd = false;
     st_num = N2F(*input.first().unwrap());
 
 
-    
+    let c0 =  CntZero(&input);
+    if c0 > 1
+    {
+        println!("YES");
+        return;
+    }
+
+    if c0 == 1
+    {
+        println!("NO");
+        return;
+    }
     
     for i in 1 .. input.len()
     {
