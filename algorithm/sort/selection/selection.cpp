@@ -18,26 +18,20 @@ void show_array(int * _array, int _size)
     std::cout << _array[i] << (i < _size-1 ? ",\t": "\n");
 }
 
-void bobble_sort(int * _array, int _size)
+void selection_sort(int * _array, int _size)
 {
   for(int un_sort =_size; un_sort > 1 ; un_sort--)
-    for(int j = 0; j+1 < un_sort; j++)
+  {
+    int idx_max = 0;
+    for(int idx = 1; idx < un_sort; idx++)
     {
-      if(_array[j] > _array[j + 1] )
-      std::swap(_array[j], _array[j+1]);
+        idx_max = (_array[idx_max] < _array[idx] ? idx : idx_max );
     }
-      
+    std::swap(_array[idx_max], _array[un_sort-1]);
+  }
+     
 }
 
-void bobble_sort2(int * _array, int _size)
-{
-  for(int sort = 0; sort <= _size; sort++)
-    for(int idx = _size -1; idx - 1 >= 0; idx--)
-    {
-      if(_array[idx-1] > _array[idx])
-        std::swap(_array[idx], _array[idx-1]);
-    }
-}
 int main(int argc , char ** argv)
 {
 
@@ -46,7 +40,7 @@ int main(int argc , char ** argv)
   show_array(array,10 );
   std::cout << "sort " << std::endl;
 
-  bobble_sort2(array, 10);
+  selection_sort(array, 10);
   show_array(array,10);
 
   return 0;
