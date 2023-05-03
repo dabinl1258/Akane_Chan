@@ -1,3 +1,3 @@
-/home/wolp/Documents/Akane_Chan/algorithm/sort/selection/build/CMakeFiles/selection.dir
-/home/wolp/Documents/Akane_Chan/algorithm/sort/selection/build/CMakeFiles/edit_cache.dir
-/home/wolp/Documents/Akane_Chan/algorithm/sort/selection/build/CMakeFiles/rebuild_cache.dir
+/home/wolp/Akane_Chan/algorithm/sort/selection/build/CMakeFiles/selection.dir
+/home/wolp/Akane_Chan/algorithm/sort/selection/build/CMakeFiles/edit_cache.dir
+/home/wolp/Akane_Chan/algorithm/sort/selection/build/CMakeFiles/rebuild_cache.dir

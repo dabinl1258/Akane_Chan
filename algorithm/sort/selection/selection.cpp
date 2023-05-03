@@ -20,14 +20,14 @@ void show_array(int * _array, int _size)
 
 void selection_sort(int * _array, int _size)
 {
-  for(int un_sort =_size; un_sort > 1 ; un_sort--)
+  for(int sorted =_size; sorted > 1 ; sorted--)
   {
     int idx_max = 0;
-    for(int idx = 1; idx < un_sort; idx++)
+    for(int idx = 1; idx < sorted; idx++)
     {
         idx_max = (_array[idx_max] < _array[idx] ? idx : idx_max );
     }
-    std::swap(_array[idx_max], _array[un_sort-1]);
+    std::swap(_array[idx_max], _array[sorted-1]);
   }
      
 }

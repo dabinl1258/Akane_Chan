@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/wolp/Documents/Akane_Chan/algorithm/sort/selection/build",
-		"source" : "/home/wolp/Documents/Akane_Chan/algorithm/sort/selection"
+		"build" : "/home/wolp/Akane_Chan/algorithm/sort/selection/build",
+		"source" : "/home/wolp/Akane_Chan/algorithm/sort/selection"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 5
 	}
 }

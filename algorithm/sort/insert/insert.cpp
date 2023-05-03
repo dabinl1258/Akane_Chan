@@ -1,35 +1,56 @@
 #include <iostream>
 #include <bits/move.h>
 #include <algorithm> // for random suffle 
-
+#include <type_traits>
+#include <bits/stdc++.h>
 
 int * gen_array(int _size)
 {
   int * ret = new int[_size];
   for(int i  = 1 ; i <= _size; i++)
     ret[i -1] = i;
-  std::random_shuffle(ret, ret + _size);
+  std::random_shuffle<int *>(ret, ret + _size);
   return ret;
 }
 
-void show_array(int * _array, int _size)
+void show_array(int * array, int _size)
 {
   for(int i = 0; i < _size; i++)
-    std::cout << _array[i] << (i < _size-1 ? ",\t": "\n");
+    std::cout << array[i] << (i < _size -1 ? " , " : "");
+  std::cout << std::endl;
 }
 
-void selection_sort(int * _array, int _size)
+void shift_array(int * _array, int _index , int len)
 {
-  for(int un_sort =_size; un_sort > 1 ; un_sort--)
-  {
-    int idx_max = 0;
-    for(int idx = 1; idx < un_sort; idx++)
-    {
-        idx_max = (_array[idx_max] < _array[idx] ? idx : idx_max );
-    }
-    std::swap(_array[idx_max], _array[un_sort-1]);
+  for(int index = _index + len - 1; index >= _index; index-- )
+    _array[index +1] = _array[index];
+  
+}
+
+void insert(int * _array, int _size, int value)
+// _size is sorted size 
+{
+  if(_size <= 0 ){
+    _array[0] = value;  
+    return;
   }
-     
+  for(int i = 0; i < _size; i++)
+  {
+    if(_array[i] <= value)
+      continue;
+    shift_array(_array, i , _size - i );
+    _array[i] = value;
+    return;
+  }
+  _array[_size] = value;
+}
+
+
+void insert_sort(int * _array, int _size)
+{
+  for(int i = 1 ; i < _size; i++)
+    insert(_array, i, _array[i]);
+    
 }
 
 int main(int argc , char ** argv)
@@ -40,7 +61,7 @@ int main(int argc , char ** argv)
   show_array(array,10 );
   std::cout << "sort " << std::endl;
 
-  selection_sort(array, 10);
+  insert_sort(array, 10);
   show_array(array,10);
 
   return 0;
