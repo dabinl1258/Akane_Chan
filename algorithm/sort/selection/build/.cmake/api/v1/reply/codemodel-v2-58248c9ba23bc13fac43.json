@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "selection::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-selection-dd79b0978df50d3e86ef.json",
+					"jsonFile" : "target-selection-b0ddf5f602f77ed08ac2.json",
 					"name" : "selection",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/wolp/Akane_Chan/algorithm/sort/selection/build",
-		"source" : "/home/wolp/Akane_Chan/algorithm/sort/selection"
+		"build" : "/home/wolp/Documents/Akane_Chan/algorithm/sort/selection/build",
+		"source" : "/home/wolp/Documents/Akane_Chan/algorithm/sort/selection"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 5
+		"minor" : 3
 	}
 }
