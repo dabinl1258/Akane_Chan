@@ -3,7 +3,9 @@
 
 ### C++ ###
 # Prerequisites
+*.a
 *.d
+*/build
 
 # Compiled Object files
 *.slo
@@ -69,3 +71,6 @@ Cargo.lock
 *.pdb
 
 # End of https://www.toptal.com/developers/gitignore/api/c++,rust,cmake
+
+# setting
+*.json
